@@ -1,5 +1,11 @@
 > webcam streamer for rpi. forked from jacksonliam/mjpg-streamer
 
+# Installation
+```
+sudo cp webcam.service /etc/systemd/system
+sudo systemctl start webcam.service
+```
+
 ---
 
 mjpg-streamer
