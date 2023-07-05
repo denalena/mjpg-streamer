@@ -3,7 +3,7 @@ Description=Webcam
 After=multi-user.target
 
 [Service]
-ExecStart=/home/deniz/other/mjpg-stramer/mjpg-streamer-experimental/service.sh
+ExecStart=/home/deniz/other/mjpg-streamer/mjpg-streamer-experimental/service.sh
 
 Type=idle
 PIDFile=/tmp/webcam.pid
