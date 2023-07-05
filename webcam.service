@@ -1,0 +1,15 @@
+[Unit]
+Description=Webcam
+After=multi-user.target
+
+[Service]
+ExecStart=/home/deniz/other/mjpg-stramer/mjpg-streamer-experimental/service.sh
+
+Type=idle
+PIDFile=/tmp/webcam.pid
+RemainAfterExit=no
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
