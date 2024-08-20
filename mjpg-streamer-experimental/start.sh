@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #/******************************************************************************
 #                                                                              #
@@ -28,8 +28,11 @@ export LD_LIBRARY_PATH="$(pwd)"
 #./mjpg_streamer -i "input_uvc.so --help"
 
 DEVICE=$(ls -t1 /dev/video* | head -n 1)
-
 DEVICE="/dev/video0"
+
+if [[ -n "$1" ]]; then
+  DEVICE="$1"
+fi
 
 ./mjpg_streamer -i "./input_uvc.so -d $DEVICE" -o "./output_http.so -w ./www"
 
